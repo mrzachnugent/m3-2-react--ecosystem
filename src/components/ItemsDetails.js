@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { useParams } from "react-router-dom";
 import { items, sellers } from "../data";
+import { Link } from "react-router-dom";
 
 const ItemPage = styled.div`
   max-width: 1170px;
@@ -64,6 +65,10 @@ const SellerInfo = styled.div`
   display: flex;
   padding-top: 25px;
   font-size: 13px;
+  a {
+    color: #000;
+    text-decoration: none;
+  }
 `;
 const SellerImg = styled.img`
   width: 50px;
@@ -106,7 +111,12 @@ const ItemsDetails = () => {
                         <SellerInfo>
                           <SellerImg src={seller.avatarSrc} alt="" />
                           <p>
-                            Sold by: <strong>{seller.storeName}</strong>
+                            Sold by:{" "}
+                            <strong>
+                              <Link to={`/sellers/${seller.id}`}>
+                                {seller.storeName}
+                              </Link>
+                            </strong>
                           </p>
                         </SellerInfo>
                       );

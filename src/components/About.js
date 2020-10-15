@@ -7,7 +7,7 @@ const Paragraph = styled.p`
 `;
 
 const Container = styled.div`
-  max-width: 1170px;
+  max-width: 1300px;
   padding: 0 50px;
   margin: 0 auto;
   display: flex;

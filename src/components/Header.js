@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 
 const HeaderContainer = styled.header`
   display: flex;
-  max-width: 1170px;
+  max-width: 1300px;
   padding: 0 50px;
   margin: 0 auto;
   justify-content: space-between;
@@ -46,12 +46,23 @@ const Header = () => {
             Home
           </NavLink>
         </NavOptions>
-
+        <NavOptions>
+          <NavLink
+            to="/sellers"
+            activeStyle={{
+              fontWeight: "700",
+              color: "#FF0F7B",
+              textDecoration: "underline",
+            }}
+          >
+            Sellers
+          </NavLink>
+        </NavOptions>
         <NavOptions>
           <NavLink
             to="/about"
             activeStyle={{
-              fontWeight: "bold",
+              fontWeight: "700",
               color: "#FF0F7B",
               textDecoration: "underline",
             }}
